@@ -1,0 +1,46 @@
+&control
+    calculation = 'scf',
+    prefix = 'Si_exc1',
+    outdir = './out/'
+    pseudo_dir = './pseudo'
+/
+&SYSTEM
+    a                         =  3.32707e+00
+    c                         =  2.50690e+01
+    degauss                   =  1.00000e-02
+    ecutrho                   =  2.25000e+02
+    ecutwfc                   =  2.50000e+01
+    ibrav                     = 4
+    nat                       = 6
+    nspin                     = 2
+    ntyp                      = 2
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  2.00000e-01
+    starting_magnetization(2) =  0.00000e+00
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {automatic}
+ 4  4  1  0 0 0
+
+ATOMIC_SPECIES
+W     183.84000  W.pbe-nsp-van.UPF
+Se     78.96000  Se.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {angstrom}
+W       1.663535   0.960442   3.767237
+W      -0.000000   1.920884  21.301714
+Se     -0.000000   1.920884   5.448461
+Se      1.663535   0.960442  22.982939
+Se     -0.000000   1.920884   2.086012
+Se      1.663535   0.960442  19.620490
+
+
