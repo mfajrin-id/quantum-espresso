@@ -1,0 +1,1 @@
+{"avail":true,"calcID":1,"title":"Convergence of SCF","xLabel":"# Iterations","xAuto":true,"xLower":0.0,"xUpper":0.0,"xTick":-1.0,"yLabel":"Total energy / Ry","yAuto":true,"yLower":0.0,"yUpper":0.0,"yTick":-1.0,"background":"lightgray","seriesList":[{"name":"Total energy","color":"dodgerblue","width":2.0,"dash":0,"withSymbol":true}]}
