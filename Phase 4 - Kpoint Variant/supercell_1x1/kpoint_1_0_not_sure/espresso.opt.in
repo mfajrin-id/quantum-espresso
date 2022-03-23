@@ -1,0 +1,56 @@
+&CONTROL
+    calculation   = "relax"
+    forc_conv_thr =  1.00000e-03
+    max_seconds   =  1.72800e+05
+    nstep         = 100
+    pseudo_dir    = "C:\Users\ROG\.burai\.pseudopot"
+/
+
+&SYSTEM
+    a                         =  3.19224e+00
+    c                         =  1.33783e+01
+    degauss                   =  1.00000e-02
+    ecutrho                   =  4.23668e+02
+    ecutwfc                   =  4.70743e+01
+    ibrav                     = 4
+    nat                       = 6
+    nspin                     = 2
+    ntyp                      = 3
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  0.00000e+00
+    starting_magnetization(2) =  0.00000e+00
+    starting_magnetization(3) =  2.00000e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+/
+
+K_POINTS {gamma}
+
+ATOMIC_SPECIES
+Sn    118.71000  Sn.pbe-dn-rrkjus_psl.1.0.0.UPF
+Se     78.96000  Se.pbe-n-rrkjus_psl.1.0.0.UPF
+W     183.84000  W.pbe-nsp-van.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Sn     -0.000002   1.843040  10.033721
+Se      1.596121   0.921519   8.469557
+Se     -0.000002   1.843040   4.908737
+Se      1.596121   0.921519  11.597884
+Se     -0.000002   1.843040   1.780410
+W       1.596121   0.921519   3.344574
+
+
