@@ -1,11 +1,13 @@
+{{ config(materialized='view') }}
+
 with campaign_pop_raw as (
   select 
     customer_id
     , customer.main_account_number AS account_number
     , customer.customer_cif as cif
     , gofood_jago_benefit_amount
-  from `jago-bank-data-production`.`jago_gobiz_data_sharing`.`monthly_gobiz_eligible_merchant_benefit` 
-    join `jago-bank-data-production`.`dbt_tests_results`.`data_analytics__datamart_base_customer` customer using(customer_id)
+  from {{ s('jago_gobiz_data_sharing', 'monthly_gobiz_eligible_merchant_benefit', has_stube=flase) }}
+    join {{ r('data_analytics__datamart_base_customer', has_stube=flase) }} customer using(customer_id)
   where
     customer.customer_status = 'ACTIVE'
     and customer.main_account_number is not null
